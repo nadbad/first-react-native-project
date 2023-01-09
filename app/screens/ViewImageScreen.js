@@ -2,12 +2,26 @@ import { StyleSheet, Text, ImageBackground, Image, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Button } from '@rneui/themed';
 
+import colors from '../config/colors';
+
 export default function ViewImageScreen(props) {
 	return (
 		<SafeAreaProvider style={styles.container}>
 			<View style={styles.topSection}>
-				<Button title='Delete' style={styles.deleteBtn} />
-				<Button title='Close' style={styles.closeBtn} />
+				<Button
+					title='Delete'
+					buttonStyle={{
+						backgroundColor: colors.primary,
+						borderRadius: 15,
+					}}
+				/>
+				<Button
+					title='Close'
+					buttonStyle={{
+						backgroundColor: colors.secondary,
+						borderRadius: 15,
+					}}
+				/>
 			</View>
 			<View>
 				<Image
@@ -23,7 +37,7 @@ export default function ViewImageScreen(props) {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#323232',
+		backgroundColor: colors.black,
 	},
 	topSection: {
 		marginTop: 30,
@@ -31,14 +45,6 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-around',
 	},
 	image: {
-		width: '100%',
-		height: '100%',
-	},
-	deleteBtn: {
-		width: '100%',
-		height: '100%',
-	},
-	closeBtn: {
 		width: '100%',
 		height: '100%',
 	},
