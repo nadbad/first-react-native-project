@@ -2,6 +2,8 @@ import { StyleSheet, Text, ImageBackground, Image, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Button } from '@rneui/themed';
 
+import colors from '../config/colors';
+
 export default function WelcomingScreen(props) {
 	return (
 		<SafeAreaProvider style={styles.container}>
@@ -19,7 +21,7 @@ export default function WelcomingScreen(props) {
 					<Button
 						title='Login'
 						buttonStyle={{
-							backgroundColor: '#769FCD',
+							backgroundColor: colors.primary,
 							borderRadius: 15,
 						}}
 						containerStyle={{
@@ -31,7 +33,7 @@ export default function WelcomingScreen(props) {
 					<Button
 						title='Register'
 						buttonStyle={{
-							backgroundColor: '#EF6C57',
+							backgroundColor: colors.secondary,
 							borderRadius: 15,
 						}}
 						containerStyle={{
